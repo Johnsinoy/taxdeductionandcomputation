@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Tax Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+
+    <div class="main-container single-column">
+        <!-- Left Section (Fixed Input Section) -->
+        <div class="input-section">
+            <h1>Income Tax Calculator</h1>
+            
+            <!-- Input for entering annual income -->
+            <label for="income">Enter taxable income:</label>
+            <input type="number" id="income" placeholder="Income">
+            
+            <!-- Input for entering tax deductions or credits -->
+            <label for="deductions">Enter tax deductions:</label>
+            <input type="number" id="deductions" placeholder="Tax Deduction">
+
+            <!-- Button to trigger tax calculation -->
+            <button id="calculateBtn">Calculate Tax</button>
+
+            <!-- Button to display tax calculation history -->
+            <button id="historyBtn">History</button>
+
+            <!-- Reset button to clear inputs and result -->
+            <button id="resetBtn">Reset</button>
+
+            <!-- Section to display the calculated tax result -->
+            <div id="result" class="output-section"></div>
+        </div>
+
+        <!-- Right Section (Hidden History Section) -->
+        <div class="history-section" id="historyContainer" style="display: none;">
+            <h2>Calculation History</h2>
+            <div id="history" class="output-section"></div>
+            
+            <!-- New button for clearing or closing history -->
+            <button id="clearHistoryBtn">Clear or Close History</button>
+        </div>
+    </div>
+</body>
+
+</html>
